@@ -39,9 +39,9 @@ Goldilock-Secure consists of spring boot application implemented with spring sec
   - if login is success you will be redirected to home.html where you will see your name in big text
   - if login is failure you will get a popup or modal stating "Invalid Credentials" and try again
   - save user - "http://localhost:8880/user/save", POST request
-  - retreive user by id - "http://localhost:8880/user/id?userId={value}", GET request
-  - retreive user by mail - "http://localhost:8880/user/email?email={value}", GET request
-  - retreive all users - "http://localhost:8880/user/all", GET request
+  - retrieve user by id - "http://localhost:8880/user/id?userId={value}", GET request
+  - retrieve user by mail - "http://localhost:8880/user/email?email={value}", GET request
+  - retrieve all users - "http://localhost:8880/user/all", GET request
   - login - "http://localhost:8880/user/signIn", GET request, it takes Authentication object which is populated with email, password and roles and validates if user details are available in db
   - get user by id, get user by mail have authorization permission only if you are admin, else all paths will be permitted
   - all paths are tested with Postman and respective html pages as well
