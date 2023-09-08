@@ -10,6 +10,6 @@ import java.util.List;
 @Repository
 public interface EmployeeRepository extends JpaRepository<Employee, Integer> {
 
-    @Query("select e from com.app.model.Employee e where e.employeeAge < ?1 and e.employeeName like ?2%")
+    @Query("select e from com.app.model.Employee e where e.employeeAge <= ?1 and e.employeeName like ?2%")
     List<Employee> getEmpByAgeAndLetter(Integer age, String letter);
 }
