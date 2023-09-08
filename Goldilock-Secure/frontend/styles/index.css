@@ -1,0 +1,51 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+.content {
+    width: 100%;
+    height: 100vh;
+    background-color: #efefef;
+}
+
+.content>div:nth-child(1){
+    height: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.head-text {
+    text-align: center;
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.content>div:nth-child(2) {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+.reg-btn,
+.login-btn {
+    width: 200px;
+    height: 50px;
+    border-radius: 10px;
+    border: 0.5px solid gainsboro;
+    outline: none;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.reg-btn:hover,
+.login-btn:hover {
+    background-color: #524a4a;
+    color: white;
+}

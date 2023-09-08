@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome</title>
+    <link rel="stylesheet" href="styles/index.css">
+</head>
+
+<body>
+
+    <div></div>
+    <div class="content">
+        <div>
+            <h2 class="head-text"></h2>
+        </div>
+        <div>
+            <button class="reg-btn">Register</button>
+            <button class="login-btn">Sign In</button>
+        </div>
+    </div>
+    <div></div>
+</body>
+
+</html>
+
+<script>
+    let catchElem = (elem) => document.querySelector(elem);
+
+    catchElem('.reg-btn').addEventListener('click', () => {
+        window.location.href = 'register.html';
+    });
+
+    catchElem('.login-btn').addEventListener('click', () => {
+        window.location.href = 'login.html';
+    });
+
+    window.addEventListener("load", () => {
+
+        fetch('http://localhost:8880/user/welcome', {
+            method: 'GET',
+            'content-type': 'application/json'
+        })
+            .then(res => {
+                if (res.status === 200) {
+                    console.log(res);
+                    return res.text();
+                }
+                else {
+                    throw new Error('Something went wrong');
+                }
+            })
+            .then(data => {
+                console.log(data);
+                catchElem('.head-text').innerHTML = data;
+            })
+            .catch(err => console.log(err));
+    })
+
+
+</script>

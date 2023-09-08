@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="styles/home.css">
+</head>
+
+<body>
+
+    <div></div>
+    <div class="content">
+        <div>
+            <h2 class="head-text"></h2>
+            <h4></h4>
+        </div>
+    </div>
+    <div></div>
+</body>
+
+</html>
+
+<script>
+
+    let catchElem = (e) => document.querySelector(e);
+
+    let user = JSON.parse(localStorage.getItem('user'));
+    console.log(user);
+
+    window.addEventListener('load', () => {
+
+        catchElem('.head-text').innerHTML = `Welcome ${user.userName}!`;
+        catchElem('.content>div>h4').innerHTML = `You logged in as ${user.userRole}`;
+
+    });
+
+</script>
