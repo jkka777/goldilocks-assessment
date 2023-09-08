@@ -101,3 +101,89 @@
     background-color: #524a4a;
     color: white;
 }
+
+.modal {
+    /* align this modal in center */
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    overflow: hidden;
+}
+
+.modal-content {
+
+    width: 35%;
+    height: 30%;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    left: 33%;
+    top: 33%;
+
+}
+
+.modal-header {
+    /* this div consists the text */
+    width: 80%;
+    background-color: #fff;
+    border-radius: 10px 10px 0 0;
+    padding: 0 20px;
+    height: 80px;
+    top: 25%;
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.modal-header p {
+    text-align: center;
+    font-size: 22px;
+    font-weight: 600;
+    color: #524a4a;
+}
+
+.modal-footer {
+    /* this div consists the buttons */
+    width: 80%;
+    background-color: #ffffff;
+    border-radius: 0 0 10px 10px;
+    padding: 0 20px;
+    height: 60px;
+    position: absolute;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    top: 60%;
+}
+
+.modal-yes {
+    width: 40%;
+    height: 40px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 500;
+    color: #524a4a;
+    background-color: white;
+    border: 1px solid #524a4a;
+}
+
+.modal-yes:hover {
+    background-color: #524a4a;
+    color: #fff;
+}
